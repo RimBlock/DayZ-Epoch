@@ -261,6 +261,9 @@ dayz_resetSelfActions = {
     s_player_toggleSnapSelect = -1;
     s_player_toggleSnapSelectPoint=[];
     snapActions = -1;
+	s_player_plot_boundary_on = -1;
+	s_player_plot_boundary_off = -1;
+	s_player_plot_take_ownership = -1;
 };
 call dayz_resetSelfActions;
 
@@ -551,6 +554,12 @@ if (isNil "DZE_modularBuild") then {
 if (isNil "DZE_snapExtraRange") then {
 	DZE_snapExtraRange = 0;
 };
+if (isNil "DZE_APlotforLife") then {
+	DZE_APlotforLife = false;
+};
+if (isNil "DZE_PlotOwnership") then {
+	DZE_PlotOwnership = false;
+};
 if (isNil "DZE_checkNearbyRadius") then {
 	DZE_checkNearbyRadius = 30;
 };
@@ -602,6 +611,10 @@ DZE_fueltruckarray = ["KamazRefuel_DZ","UralRefuel_TK_EP1_DZ","MtvrRefuel_DES_EP
 dayz_fuelsources = ["Land_Ind_TankSmall","Land_fuel_tank_big","Land_fuel_tank_stairs","Land_fuel_tank_stairs_ep1","Land_wagon_tanker","Land_fuelstation","Land_fuelstation_army","land_fuelstation_w","Land_benzina_schnell"];
 
 DZE_Lock_Door = "";
+
+if (isNil "DZE_plotOwnershipExclusions") then {
+	DZE_plotTakeOwnershipItems = dayz_allowedObjects - (DZE_LockableStorage + ["Plastic_Pole_EP1_DZ","TentStorage","TentStorageDomed","TentStorageDomed2"]);
+};
 
 //init global arrays for Loot Chances
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\loot_init.sqf";
