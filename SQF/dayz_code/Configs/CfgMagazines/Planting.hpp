@@ -81,7 +81,6 @@ class ItemHempPlant: CA_Magazine {
 	weight = 0.1;
 	model = "\z\addons\dayz_epoch\models\doc_child2.p3d";	// TODO: model + icon
 	picture = "\z\addons\dayz_epoch\pictures\equip_child2_ca.paa";
-	type = 256;
 	class ItemActions {
 		class Build {
 			text = "Plant Hemp";
