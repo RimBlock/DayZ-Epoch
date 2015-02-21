@@ -94,6 +94,10 @@ DZE_requireplot = 1;				// Default: 1
 DZE_PlotPole = [30,45];				// Default: [30,45] = [x,y]
 DZE_BuildOnRoads = false; 			// Default: false
 
+DZE_APlotforLife = false;			// Change to true to turn on A Plot for Life (buildables linked to SteamID not characterID.
+DZE_PlotOwnership = false;			// Change to true to turn on ability to take over plots from a plot pole the player owns.
+DZE_modularBuild = false;			// Change to true to turn on the modular build system inc Snap Build Pro.
+
 //--------------------------------------------------------------------//
 //--------------------------------------------------------------------//
 //--------------------------------------------------------------------//
