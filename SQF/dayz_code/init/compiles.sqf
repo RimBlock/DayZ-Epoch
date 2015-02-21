@@ -112,14 +112,13 @@ if (!isDedicated) then {
 		player_build_controls =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_build_controls.sqf";
 		player_build_publish =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_build_publish.sqf";
 
-		DZE_snap_build_file = 		"\z\addons\dayz_code\snap_build.sqf"; // Set as a global variable as it is also referenced in snapbuild.sqf
+		DZE_snap_build_file = 		"\z\addons\dayz_code\actions\snap_build.sqf"; // Set as a global variable as it is also referenced in snapbuild.sqf
 		snap_build = 			compile preprocessFileLineNumbers DZE_snap_build_file;
 	} else {
 		player_build =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_build.sqf";
 	};
 	
-	FNC_check_owner =			compile preprocessFileLineNumbers "\z\addons\dayz_code\Compile\fn_check_owner.sqf";
-	FNC_find_plots =			compile preprocessFileLineNumbers "\z\addons\dayz_code\Compile\fn_find_plots.sqf";
+	TakeOwnershipCount =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\plot_ownership_count.sqf";
 	
 	player_wearClothes =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_wearClothes.sqf";
 	object_pickup = 		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\object_pickup.sqf";
@@ -128,7 +127,7 @@ if (!isDedicated) then {
 	player_antiWall =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_antiWall.sqf";
 	player_deathBoard =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\list_playerDeathsAlt.sqf";
 	
-	player_plotPreview = 		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\object_showPlotRadius.sqf";
+	player_plotPreview = 		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\object_showPlotRadius.sqf";
 	player_upgradeVehicle =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_upgradeVehicle.sqf";
 
 	//ui
@@ -552,6 +551,10 @@ if (!isDedicated) then {
 	spawn_loot =				compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\spawn_loot.sqf";
 	spawn_loot_small = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\spawn_loot_small.sqf";
 	// player_projectileNear = 		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_projectileNear.sqf";
+	
+	FNC_check_owner =			compile preprocessFileLineNumbers "\z\addons\dayz_code\Compile\fn_check_owner.sqf";
+	FNC_find_plots =			compile preprocessFileLineNumbers "\z\addons\dayz_code\Compile\fn_find_plots.sqf";
+	
 	FNC_GetPlayerUID = {
 		private ["_object","_version","_PID"];
 		_object = _this select 0;

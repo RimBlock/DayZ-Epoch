@@ -221,19 +221,19 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 
 		if (s_player_plot_boundary_on < 0) then {
 			If (_PlotsmarkersNear == 0 ) then{
-				s_player_plot_boundary_on = player addAction ["Show plot boundary", "Custom\A_Plot_for_Life\Action\object_showPlotRadius.sqf", "", 1, false];
+				s_player_plot_boundary_on = player addAction ["Show plot boundary", "\z\addons\dayz_code\actions\object_showPlotRadius.sqf", "", 1, false];
 			};
 		 };	
 		 if (s_player_plot_boundary_off < 0) then {
 			If (_PlotsmarkersNear > 0 ) then{
-				s_player_plot_boundary_off = player addAction ["Remove plot boundary", "Custom\A_Plot_for_Life\Action\object_removePlotRadius.sqf", "", 1, false];
+				s_player_plot_boundary_off = player addAction ["Remove plot boundary", "\z\addons\dayz_code\actions\object_removePlotRadius.sqf", "", 1, false];
 			};
 		};
 		if (s_player_plot_take_ownership < 0) then {
 			if (DZE_PlotOwnership) then {
 				_isowner = [player, _cursorTarget] call FNC_check_owner;
 				If (( _isowner select 0 )) then{
-					s_player_plot_take_ownership = player addAction ["Take plot items ownership", "Custom\A_Plot_for_Life\Action\plot_take_ownership.sqf", "", 1, false];
+					s_player_plot_take_ownership = player addAction ["Take plot items ownership", "\z\addons\dayz_code\actions\plot_take_ownership.sqf", "", 1, false];
 				};
 			};
 		};

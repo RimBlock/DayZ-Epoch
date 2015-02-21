@@ -199,11 +199,6 @@ class CfgWeapons {
 		descriptionShort = "Hermlite Chainsaw (Red)";
 	};
 
-
-
-
-
-
 	class MeleeWeapon : Rifle {
 		canDrop = true;
 	};

@@ -40,6 +40,9 @@ if (isServer) then {
 	/* PVS/PVC - Skaronator */
 	"PVDZE_send" addPublicVariableEventHandler {(_this select 1) call server_sendToClient};
 	"PVDZE_maintainArea" addPublicVariableEventHandler {(_this select 1) spawn server_maintainArea};
+	if (isServer) then {
+	"PVDZE_TakePlotOwnership" 	addPublicVariableEventHandler {(_this select 1) call TakePlotOwnership};
+};
 
 	"PVDZE_atp" addPublicVariableEventHandler {
 		_x = _this select 1;
@@ -88,4 +91,6 @@ if (!isDedicated) then {
 
 	"norrnRaDrag"			addPublicVariableEventHandler {(_this select 1) execVM "\z\addons\dayz_code\medical\publicEH\animDrag.sqf"};
 	"norrnRnoAnim"			addPublicVariableEventHandler {(_this select 1) execVM "\z\addons\dayz_code\medical\publicEH\noAnim.sqf"};
+	
+	"PVDZE_TakeOwnershipCount" 	addPublicVariableEventHandler {(_this select 1) call TakeOwnershipCount};	
 };

@@ -1,17 +1,17 @@
 // Build preview adopted from Axe Cop (@vos) Base Destruction Script
 // Amended by RimBlock (http://epochmod.com/forum/index.php?/user/12612-rimblock/) to allow plot radius removal.
 
-private ["_location","_object","_i","_dir","_nearestPole","_distance","_IsNearPlot","_BD_radius","_BD_center","_plotcheck"];
+private ["_location","_object","_i","_dir","_nearPlotPole","_light","_lightlocationtemp","_lightlocation","_lightarray"];
 
 // global vars
-
-_plotcheck = [player, false] call FNC_find_plots;
-_distance = _plotcheck select 0;
-_nearestPole = _plotcheck select 2;
+_nearPlotPole = nearestObject [player, "Plastic_Pole_EP1_DZ"];
+_lightarray = [];
 
 //"privatized" center variable
-_BD_radius = _distance;
-_BD_center = [_nearestPole] call FNC_getPos;
+_BD_radius = DZE_PlotPole select 0;
+_BD_center = [_nearPlotPole] call FNC_getPos;
+
+_color = "#(argb,8,8,3)color(0.99,0.65,0.06,1,ca)"; //dark orange
 	
 // circle
 for "_i" from 0 to 360 step (450 / _BD_radius) do {
@@ -23,4 +23,3 @@ for "_i" from 0 to 360 step (450 / _BD_radius) do {
 	_object setpos _location;
 
 };
-

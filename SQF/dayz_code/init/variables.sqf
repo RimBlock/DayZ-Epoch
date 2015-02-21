@@ -612,7 +612,7 @@ dayz_fuelsources = ["Land_Ind_TankSmall","Land_fuel_tank_big","Land_fuel_tank_st
 
 DZE_Lock_Door = "";
 
-if (isNil "DZE_plotOwnershipExclusions") then {
+if (isNil "DZE_plotTakeOwnershipItems") then {
 	DZE_plotTakeOwnershipItems = dayz_allowedObjects - (DZE_LockableStorage + ["Plastic_Pole_EP1_DZ","TentStorage","TentStorageDomed","TentStorageDomed2"]);
 };
 

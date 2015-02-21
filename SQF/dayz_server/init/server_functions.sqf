@@ -8,7 +8,7 @@ BIS_MPF_remoteExecutionServer = {
 
 BIS_Effects_Burn =				{};
 
-call compile preprocessFileLineNumbers "custom\compile\KK_Functions.sqf";
+call compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\KK_Functions.sqf";
 
 server_playerLogin =			compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_playerLogin.sqf";
 server_playerSetup =			compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_playerSetup.sqf";
@@ -31,6 +31,7 @@ server_spawnEvents =			compile preprocessFileLineNumbers "\z\addons\dayz_server\
 fnc_plyrHit   =					compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\fnc_plyrHit.sqf";
 server_deaths = 				compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_playerDeaths.sqf";
 server_maintainArea = 			compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_maintainArea.sqf";
+TakePlotOwnership = 			compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\plot_take_ownership.sqf";
 
 /* PVS/PVC - Skaronator */
 server_sendToClient =			compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_sendToClient.sqf";

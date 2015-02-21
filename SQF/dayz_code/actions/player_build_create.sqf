@@ -31,7 +31,7 @@ _objectHelper attachTo [player,_offset];
 _object attachTo [_objectHelper,[0,0,0]];
 
 
-if (isClass (missionConfigFile >> "SnapBuilding" >> _classname)) then {	
+if (isClass (configFile >> "SnapBuilding" >> _classname)) then {	
 	["","","",["Init",_object,_classname,_objectHelper]] spawn snap_build;
 };
 
