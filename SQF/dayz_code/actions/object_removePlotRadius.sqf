@@ -7,9 +7,9 @@ _isnearplot = 0;
 
 // check for near plot
 _plotcheck = [player, false] call FNC_find_plots;
-_distance = (_plotcheck select 0) + 5;
+_distance = (_plotcheck select 0) + 2;
 _nearestPole = _plotcheck select 2;
-_findNearestMarkers = (position _nearestPole) nearEntities ["Land_coneLight", _distance];
+_findNearestMarkers = (position _nearestPole) nearEntities ["sign_sphere100cm_EP1", _distance];
 
 {
 	_poleinv = _x getVariable ["inventory",[]];

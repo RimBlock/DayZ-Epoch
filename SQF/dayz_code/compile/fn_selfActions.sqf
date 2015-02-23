@@ -216,8 +216,8 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 		 	s_player_maintain_area_preview = player addAction [format["<t color='#ff0000'>%1</t>",localize "STR_EPOCH_ACTIONS_MAINTPREV"], "\z\addons\dayz_code\actions\maintain_area.sqf", "preview", 5, false];
 		 };
 
-		 _plotDistance = (DZE_PlotPole select 0);
-		_PlotsmarkersNear = count (_cursorTarget nearEntities ["Land_coneLight", _PlotDistance]);
+		 _plotDistance = (DZE_PlotPole select 0) + 2;
+		_PlotsmarkersNear = count (_cursorTarget nearEntities ["sign_sphere100cm_EP1", _PlotDistance]);
 
 		if (s_player_plot_boundary_on < 0) then {
 			If (_PlotsmarkersNear == 0 ) then{
